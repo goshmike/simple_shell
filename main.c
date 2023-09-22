@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-* main - Entry point for the program.
-* @ac: Argument count.
-* @av: Argument vector.
+* main - entry point
+* @ac: arg count
+* @av: arg vector
 *
-* Return: 0 on success, 1 on error.
+* Return: 0 on success, 1 on error
 */
 int main(int ac, char **av)
 {
@@ -26,11 +26,11 @@ if (errno == EACCES)
 exit(126);
 if (errno == ENOENT)
 {
-_eput_string(av[0]);
-_eput_string(": 0: Can't open ");
-_eput_string(av[1]);
-_eput_character('\n');
-_eput_character(BUFFER_FLUSH);
+_eputs(av[0]);
+_eputs(": 0: Can't open ");
+_eputs(av[1]);
+_eputchar('\n');
+_eputchar(BUF_FLUSH);
 exit(127);
 }
 return (EXIT_FAILURE);
@@ -42,3 +42,4 @@ read_history(info);
 hsh(info, av);
 return (EXIT_SUCCESS);
 }
+
