@@ -82,7 +82,7 @@ info->cmd_buf_type = CMD_NORM;
 }
 
 *buf_p = p; /* Pass back a pointer to the current command position. */
-return (_strlen(p)); /* Return the length of the current command. */
+return (strlen(p)); /* Return the length of the current command. */
 }
 
 *buf_p = buf; /* Else not a chain, pass back the buffer from _getline() */
@@ -142,9 +142,9 @@ if (!new_p) /* MALLOC FAILURE! */
 return (p ? free(p), -1 : -1);
 
 if (s)
-_strncat(new_p, buf + i, k - i);
+strncat(new_p, buf + i, k - i);
 else
-_strncpy(new_p, buf + i, k - i + 1);
+strncpy(new_p, buf + i, k - i + 1);
 
 s += k - i;
 i = k;
