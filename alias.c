@@ -82,7 +82,7 @@ info->cmd_buf_type = CMD_NORM;
 }
 
 *buf_p = p; /* Pass back a pointer to the current command position. */
-return (strlen(p)); /* Return the length of the current command. */
+return (_strlen(p)); /* Return the length of the current command. */
 }
 
 *buf_p = buf; /* Else not a chain, pass back the buffer from _getline() */
@@ -112,7 +112,7 @@ return (r);
 /**
 * _getline - Function to get the next line of input from STDIN.
 * @info: Pointer to the parameter struct.
-* @ptr: Pointer to the address of the pointer to the buffer, or NULL.
+* @ptr: Pointer to the address of the pointer to the buffer, preallocated or NULL.
 * @length: The size of the preallocated ptr buffer if not NULL.
 *
 * Return: s
@@ -142,9 +142,9 @@ if (!new_p) /* MALLOC FAILURE! */
 return (p ? free(p), -1 : -1);
 
 if (s)
-strncat(new_p, buf + i, k - i);
+_strncat(new_p, buf + i, k - i);
 else
-strncpy(new_p, buf + i, k - i + 1);
+_strncpy(new_p, buf + i, k - i + 1);
 
 s += k - i;
 i = k;

@@ -132,21 +132,21 @@ int _putfd(char c, int fd);
 int _putsfd(char *str, int fd);
 
 /* string_functions.c */
-int strlen(char *);
-int strcmp(char *, char *);
-char *startswith(const char *, const char *);
-char *strcat(char *, char *);
+int _strlen(char *);
+int _strcmp(char *, char *);
+char *starts_with(const char *, const char *);
+char *_strcat(char *, char *);
 
 /* string_functions2.c */
-char *strcpy(char *, char *);
-char *strdup(const char *);
+char *_strcpy(char *, char *);
+char *_strdup(const char *);
 void _puts(char *);
 int _putchar(char);
 
 /* string_functions3.c */
-char *strncpy(char *, char *, int);
-char *strncat(char *, char *, int);
-char *strchr(char *, char);
+char *_strncpy(char *, char *, int);
+char *_strncat(char *, char *, int);
+char *_strchr(char *, char);
 
 /* string_functions4.c */
 char **strtow(char *, char *);

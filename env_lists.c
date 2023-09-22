@@ -32,7 +32,7 @@ char *p;
 
 while (node)
 {
-p = startswith(node->str, name);
+p = starts_with(node->str, name);
 if (p && *p)
 return (p);
 node = node->next;
