@@ -57,7 +57,7 @@ char *path;
 
 if (!pathstr)
 return (NULL);
-if ((strlen(cmd) > 2) && startswith(cmd, "./"))
+if ((strlen(cmd) > 2) && starts_with(cmd, "./"))
 {
 if (is_cmd(info, cmd))
 return (cmd);
@@ -68,11 +68,11 @@ if (!pathstr[i] || pathstr[i] == ':')
 {
 path = dup_chars(pathstr, curr_pos, i);
 if (!*path)
-strcat(path, cmd);
+_strcat(path, cmd);
 else
 {
-strcat(path, "/");
-strcat(path, cmd);
+_strcat(path, "/");
+_strcat(path, cmd);
 }
 if (is_cmd(info, path))
 return (path);

@@ -16,13 +16,13 @@ char *buf, *dir;
 dir = _getenv(info, "HOME=");
 if (!dir)
 return (NULL);
-buf = malloc(sizeof(char) * (strlen(dir) + strlen(HIST_FILE) + 2));
+buf = malloc(sizeof(char) * (_strlen(dir) + _strlen(HIST_FILE) + 2));
 if (!buf)
 return (NULL);
 buf[0] = 0;
-strcpy(buf, dir);
-strcat(buf, "/");
-strcat(buf, HIST_FILE);
+_strcpy(buf, dir);
+_strcat(buf, "/");
+_strcat(buf, HIST_FILE);
 return (buf);
 }
 
