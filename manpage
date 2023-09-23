@@ -1,0 +1,68 @@
+.\" Manpage for Simple Shell.
+.TH "Simple Shell"  "23 September 2023" "1.0" "Simple Shell Manual"
+
+.SH NAME
+hsh \- Simple Shell
+
+.SH SYNOPSIS
+.B hsh
+
+.SH DESCRIPTION
+Welcome to the Simple Shell project! The Simple Shell is a minimalistic Unix-like command-line interface. This program can be compiled and executed from the command line on various Linux distributions.
+
+.SH OVERVIEW
+The Simple Shell project is a collaborative effort led by Taiwo Amodu and Micheal OLushola, students at ALX School.
+
+.SH RETURN VALUE
+The Simple Shell returns the exit status of the last executed command. Additionally, it can exit when Ctrl-D is pressed or when the "exit" command is issued.
+
+.SH SYNTAX
+The syntax for using the Simple Shell is as follows:
+
+.B Shell$ <command> <flags or options> <argument 1> <argument 2> ...
+
+To execute a command using the shell, you can simply type the command followed by its arguments.
+
+.PP
+.B $ <command> | ./hsh
+
+You can also use a pipe (|) to send the output of one command as input to the Simple Shell.
+
+.PP
+EXAMPLES:
+
+.B Shell$ /bin/ls
+.PP
+.B Shell$ ls -l
+.PP
+.B Shell$ cat textfile
+.PP
+.B $ echo "ls -l" | ./hsh
+
+.SH BUILTIN COMMANDS
+The Simple Shell supports the following built-in commands:
+
+.SS env
+List the current environment variables.
+
+.SS exit
+Exit the shell.
+
+.SH SEE ALSO
+.DASH(1)
+
+.SH BUGS
+There are currently no known bugs in the Simple Shell.
+
+.SH AUTHOR
+The Simple Shell project is led by Otung Princess and Akinpelu Faith as part of their coursework at ALX School.
+
+.SH REPORTING BUGS
+Please report bugs to the project team for prompt resolution.
+
+.SH COPYRIGHT
+This software is distributed under the GNU General Public License. You are free to modify and distribute it under the terms of the license.
+
+.SH DISCLAIMER
+This program is provided "as is" without warranty of any kind. Use it at your own risk.
+
